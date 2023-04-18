@@ -1,4 +1,4 @@
-<div style="color: '#1877f2'">Project Initialization:</div>
+##Project Initialization:
 
 <table>
   <tr>
