@@ -19,8 +19,8 @@ interface TippyShowProps {
 }
 
 const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
-   const [history, setHistory] = useState<HistoryItem[]>([{ data: menuArr }]);
-   const current = history[history.length - 1];
+   // const [history, setHistory] = useState<HistoryItem[]>([{ data: menuArr }]);
+   // const current = history[history.length - 1];
    // const router = useRouter();
 
    return (
