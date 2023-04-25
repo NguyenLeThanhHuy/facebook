@@ -168,7 +168,8 @@ const MenuChat: React.FC<MenuChatProps> = ({ currentUser }) => {
          <div className="cursor-pointer">
             <Tippy
                content={
-                  <TippyShow currentUser={currentUser} menuArr={listNavBox} />
+                  's'
+                  // <TippyShow currentUser={currentUser} menuArr={listNavBox} />
                }
                placement="bottom-end"
                arrow={false}
