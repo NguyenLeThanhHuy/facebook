@@ -35,7 +35,7 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
                   }}
                />
             ) : ( */}
-            <AccountChange currentUser={currentUser} />
+            {/* <AccountChange currentUser={currentUser} /> */}
             {/* )} */}
          </div>
 
