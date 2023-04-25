@@ -26,7 +26,7 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
    return (
       <div className="bg-[#242526] px-2 py-4 top-0 rounded-b-xl">
          <div className="px-2">
-            {history.length > 1 ? (
+            {/* {history.length > 1 ? (
                <HeadTippy
                   icon={current.icon}
                   title={current.title}
@@ -34,9 +34,9 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
                      setHistory((prev) => prev.slice(0, prev.length - 1));
                   }}
                />
-            ) : (
-               <AccountChange currentUser={currentUser} />
-            )}
+            ) : ( */}
+            <AccountChange currentUser={currentUser} />
+            {/* )} */}
          </div>
 
          <div className="py-3 flex flex-col min-w-[330px] ">
