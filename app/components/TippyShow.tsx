@@ -20,7 +20,7 @@ interface TippyShowProps {
 
 const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
    const [history, setHistory] = useState([{ data: menuArr }]);
-   const current = history[history.length - 1];
+   // const current = history[history.length - 1];
    // const router = useRouter();
 
    return (
@@ -40,7 +40,7 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
          </div>
 
          <div className="py-3 flex flex-col min-w-[330px] ">
-            {current.data.map((item, index) => {
+            {history.map((item, index) => {
                // const isParent = !!item.children;
                console.log(item);
                return (
