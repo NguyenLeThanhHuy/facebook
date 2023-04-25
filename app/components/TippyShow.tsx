@@ -42,7 +42,6 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
          <div className="py-3 flex flex-col min-w-[330px] ">
             {current.data.map((item, index) => {
                // const isParent = !!item.children;
-               console.log(item);
                return (
                   <div
                      key={index}

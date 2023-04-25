@@ -33,7 +33,7 @@ interface MenuChatProps {
 const MenuChat: React.FC<MenuChatProps> = ({ currentUser }) => {
    const [showTippy, setShowTippy] = useState(false);
 
-   const listNavBox = useRef([
+   const listNavBox = [
       {
          label: 'Meta Business Suite',
          beforeIcon: MdBusiness,
@@ -101,7 +101,7 @@ const MenuChat: React.FC<MenuChatProps> = ({ currentUser }) => {
          beforeIcon: MdOutlineLogout,
          onSignOut: () => signOut(),
       },
-   ]);
+   ];
 
    const handleClick = useCallback(() => {
       setShowTippy(!showTippy);
@@ -168,24 +168,21 @@ const MenuChat: React.FC<MenuChatProps> = ({ currentUser }) => {
          <div className="cursor-pointer">
             <Tippy
                content={
-                  <TippyShow
-                     currentUser={currentUser}
-                     menuArr={listNavBox.current}
-                  />
+                  <TippyShow currentUser={currentUser} menuArr={listNavBox} />
                }
                placement="bottom-end"
                arrow={false}
-               popperOptions={{
-                  modifiers: [
-                     {
-                        name: 'preventOverflow',
-                        options: { boundary: 'window' },
-                     },
-                  ],
-               }}
+               // popperOptions={{
+               //    modifiers: [
+               //       {
+               //          name: 'preventOverflow',
+               //          options: { boundary: 'window' },
+               //       },
+               //    ],
+               // }}
                visible={showTippy}
             >
-               <Tippy
+               {/* <Tippy
                   content={'Account'}
                   arrow={false}
                   className="bg-[#cacdd3c7] text-neutral-800 text-base font-light py-2 px-3 rounded-xl"
@@ -197,16 +194,16 @@ const MenuChat: React.FC<MenuChatProps> = ({ currentUser }) => {
                         },
                      ],
                   }}
-               >
-                  <Image
-                     className="rounded-full"
-                     width={40}
-                     height={40}
-                     src={'/images/noneuser.jpg'}
-                     alt="Image User"
-                     onClick={handleClick}
-                  />
-               </Tippy>
+               > */}
+               <Image
+                  className="rounded-full"
+                  width={40}
+                  height={40}
+                  src={'/images/noneuser.jpg'}
+                  alt="Image User"
+                  onClick={handleClick}
+               />
+               {/* </Tippy> */}
             </Tippy>
          </div>
       </div>
