@@ -17,7 +17,9 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
          <div className="w-1/2">
             <NavBox />
          </div>
-         <div className="w-1/4"></div>
+         <div className="w-1/4">
+            <MenuChat currentUser={currentUser} />
+         </div>
       </div>
    );
 };
