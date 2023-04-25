@@ -196,7 +196,7 @@ const MenuChat: React.FC<MenuChatProps> = ({ currentUser }) => {
                   }}
                >
                   <Image
-                     className="rounded-full"
+                     className="rounded-full bg-white"
                      width={40}
                      height={40}
                      src={'/images/noneuser.jpg'}
