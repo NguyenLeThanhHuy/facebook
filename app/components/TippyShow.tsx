@@ -7,11 +7,11 @@ import HeadTippy from './HeadTippy';
 import { IconType } from 'react-icons/lib';
 // import { useRouter } from 'next/navigation';
 
-interface HistoryItem {
-   data: any[];
-   icon?: IconType;
-   title?: string;
-}
+// interface HistoryItem {
+//    data: any[];
+//    icon?: IconType;
+//    title?: string;
+// }
 
 interface TippyShowProps {
    currentUser: User | null;
