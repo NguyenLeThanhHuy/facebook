@@ -1,3 +1,4 @@
+'use client';
 import { useRouter } from 'next/navigation';
 import { IconType } from 'react-icons/lib';
 import Tippy from '@tippyjs/react';

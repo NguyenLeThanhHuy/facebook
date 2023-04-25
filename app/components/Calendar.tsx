@@ -1,5 +1,7 @@
+'use client';
+
 import { useState } from 'react';
-import { Calendar, DateRange } from 'react-date-range';
+import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 

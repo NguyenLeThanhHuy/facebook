@@ -1,3 +1,4 @@
+'use client';
 import { User } from '@prisma/client';
 import SearchSide from './SearchSide';
 import NavBox from './NavBox';

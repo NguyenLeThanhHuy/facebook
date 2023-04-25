@@ -1,11 +1,11 @@
 'use client';
 
 import { User } from '@prisma/client';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import AccountChange from './AccoutChange';
 import HeadTippy from './HeadTippy';
 import { IconType } from 'react-icons/lib';
-import { usePathname, useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 interface HistoryItem {
    data: any[];
