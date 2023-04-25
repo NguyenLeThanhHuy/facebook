@@ -30,7 +30,11 @@ const AccountChange: React.FC<AccountChangeProps> = ({ currentUser }) => {
                   height={20}
                   className="cursor-pointer rounded-full"
                   alt="Image Page User"
-                  src={currentUser?.image as string}
+                  src={
+                     (currentUser?.image as string)
+                        ? (currentUser?.image as string)
+                        : '/images/noneuser.jpg'
+                  }
                />
 
                <BsArrowRepeat
