@@ -165,7 +165,50 @@ const MenuChat: React.FC<MenuChatProps> = ({ currentUser }) => {
             </div>
          </Tippy>
 
-         <div className="cursor-pointer"></div>
+         <div className="cursor-pointer">
+            <Tippy
+               content={
+                  <TippyShow
+                     currentUser={currentUser}
+                     menuArr={listNavBox.current}
+                  />
+               }
+               placement="bottom-end"
+               arrow={false}
+               popperOptions={{
+                  modifiers: [
+                     {
+                        name: 'preventOverflow',
+                        options: { boundary: 'window' },
+                     },
+                  ],
+               }}
+               visible={showTippy}
+            >
+               <Tippy
+                  content={'Account'}
+                  arrow={false}
+                  className="bg-[#cacdd3c7] text-neutral-800 text-base font-light py-2 px-3 rounded-xl"
+                  popperOptions={{
+                     modifiers: [
+                        {
+                           name: 'preventOverflow',
+                           options: { boundary: 'window' },
+                        },
+                     ],
+                  }}
+               >
+                  <Image
+                     className="rounded-full"
+                     width={40}
+                     height={40}
+                     src={'/images/noneuser.jpg'}
+                     alt="Image User"
+                     onClick={handleClick}
+                  />
+               </Tippy>
+            </Tippy>
+         </div>
       </div>
    );
 };

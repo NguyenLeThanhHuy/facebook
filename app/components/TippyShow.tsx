@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 import AccountChange from './AccoutChange';
 import HeadTippy from './HeadTippy';
 import { IconType } from 'react-icons/lib';
-import { useRouter } from 'next/navigation';
+// import { useRouter } from 'next/navigation';
 
 interface HistoryItem {
    data: any[];
@@ -21,7 +21,7 @@ interface TippyShowProps {
 const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
    const [history, setHistory] = useState<HistoryItem[]>([{ data: menuArr }]);
    const current = history[history.length - 1];
-   const router = useRouter();
+   // const router = useRouter();
 
    return (
       <div className="bg-[#242526] px-2 py-4 top-0 rounded-b-xl">
@@ -50,9 +50,9 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
                            item.onSignOut();
                         }
 
-                        if (item.to) {
-                           router.push(item.to);
-                        }
+                        // if (item.to) {
+                        //    router.push(item.to);
+                        // }
 
                         if (isParent && item.children) {
                            setHistory((prev) => [...prev, item.children]);
