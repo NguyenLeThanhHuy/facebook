@@ -17,7 +17,11 @@ const AccountChange: React.FC<AccountChangeProps> = ({ currentUser }) => {
                      width={40}
                      className="rounded-full cursor-pointer"
                      height={40}
-                     src={currentUser?.image as string}
+                     src={
+                        (currentUser?.image as string)
+                           ? (currentUser?.image as string)
+                           : '/images/noneuser.jpg'
+                     }
                   />
                </div>
                <div className="text-white font-medium text-xl">
