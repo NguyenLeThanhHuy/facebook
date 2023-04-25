@@ -19,10 +19,10 @@ interface TippyShowProps {
 }
 
 const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
-   const [history, setHistory] = useState([{ data: menuArr }]);
-   const current = history[history.length - 1];
+   // const [history, setHistory] = useState([{ data: menuArr }]);
+   // const current = history[history.length - 1];
    // const router = useRouter();
-   console.log(currentUser);
+   // console.log(currentUser);
    return (
       <div className="bg-[#242526] px-2 py-4 top-0 rounded-b-xl">
          <div className="px-2">
@@ -35,12 +35,13 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
                   }}
                />
             ) : ( */}
-            <AccountChange currentUser={currentUser} />
+            {/* <AccountChange currentUser={currentUser} /> */}
             {/* )} */}
+            abc
          </div>
 
-         <div className="py-3 flex flex-col min-w-[330px] ">
-            {/* {current.data.map((item, index) => {
+         {/* <div className="py-3 flex flex-col min-w-[330px] "> */}
+         {/* {current.data.map((item, index) => {
                // const isParent = !!item.children;
                 return (
                   <div
@@ -82,7 +83,7 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
                   </div>
                );
             })} */}
-         </div>
+         {/* </div> */}
       </div>
    );
 };
