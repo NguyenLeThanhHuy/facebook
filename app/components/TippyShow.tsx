@@ -26,7 +26,7 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
    return (
       <div className="bg-[#242526] px-2 py-4 top-0 rounded-b-xl">
          <div className="px-2">
-            {history.length > 1 ? (
+            {/* {history.length > 1 ? (
                <HeadTippy
                   icon={current.icon}
                   title={current.title}
@@ -34,26 +34,25 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
                      setHistory((prev) => prev.slice(0, prev.length - 1));
                   }}
                />
-            ) : (
-               <AccountChange currentUser={currentUser} />
-            )}
+            ) : ( */}
+            <AccountChange currentUser={currentUser} />
+            {/* )} */}
          </div>
 
          <div className="py-3 flex flex-col min-w-[330px] ">
             {current.data.map((item, index) => {
-               const isParent = !!item.children;
+               // const isParent = !!item.children;
+               console.log(item);
                return (
                   <div
                      key={index}
                      onClick={() => {
-                        if (item.onSignOut) {
-                           item.onSignOut();
-                        }
-
+                        // if (item.onSignOut) {
+                        //    item.onSignOut();
+                        // }
                         // if (item.to) {
                         //    router.push(item.to);
                         // }
-
                         // if (isParent && item.children) {
                         //    setHistory((prev) => [...prev, item.children]);
                         // } else {
@@ -73,7 +72,7 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
                         </div>
                      </div>
                      <div className="relative">
-                        {item?.afterIcon && (
+                        {item.afterIcon && (
                            <item.afterIcon
                               className=""
                               size={20}
