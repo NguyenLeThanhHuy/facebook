@@ -7,11 +7,11 @@ import HeadTippy from './HeadTippy';
 import { IconType } from 'react-icons/lib';
 // import { useRouter } from 'next/navigation';
 
-interface HistoryItem {
-   data: any[];
-   icon?: IconType;
-   title?: string;
-}
+// interface HistoryItem {
+//    data: any[];
+//    icon?: IconType;
+//    title?: string;
+// }
 
 interface TippyShowProps {
    currentUser: User | null;
@@ -19,7 +19,7 @@ interface TippyShowProps {
 }
 
 const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
-   const [history, setHistory] = useState<HistoryItem[]>([{ data: menuArr }]);
+   const [history, setHistory] = useState([{ data: menuArr }]);
    const current = history[history.length - 1];
    // const router = useRouter();
 
