@@ -40,28 +40,28 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
          </div>
 
          <div className="py-3 flex flex-col min-w-[330px] ">
-            {/* {current.data.map((item, index) => {
-               // const isParent = !!item.children;
+            {current.data.map((item, index) => {
+               const isParent = !!item.children;
                console.log(item);
-               return ( */}
-            <div
-               // key={index}
-               onClick={() => {
-                  // if (item.onSignOut) {
-                  //    item.onSignOut();
-                  // }
-                  // if (item.to) {
-                  //    router.push(item.to);
-                  // }
-                  // if (isParent && item.children) {
-                  //    setHistory((prev) => [...prev, item.children]);
-                  // } else {
-                  //    console.log('No children');
-                  // }
-               }}
-               className="flex hover:bg-[#4c48489b] rounded-xl transition-all flex-row w-full justify-between items-center p-2"
-            >
-               {/* <div className="flex-row flex gap-2 items-center justify-start ">
+               return (
+                  <div
+                     key={index}
+                     onClick={() => {
+                        // if (item.onSignOut) {
+                        //    item.onSignOut();
+                        // }
+                        // if (item.to) {
+                        //    router.push(item.to);
+                        // }
+                        if (isParent && item.children) {
+                           setHistory((prev) => [...prev, item.children]);
+                        } else {
+                           console.log('No children');
+                        }
+                     }}
+                     className="flex hover:bg-[#4c48489b] rounded-xl transition-all flex-row w-full justify-between items-center p-2"
+                  >
+                     <div className="flex-row flex gap-2 items-center justify-start ">
                         <div className="p-2 bg-[#5d606178] rounded-full">
                            {item.beforeIcon && (
                               <item.beforeIcon size={20} fill="#E4E6EB" />
@@ -70,19 +70,19 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
                         <div className="font-medium text-base text-white">
                            {item.label}
                         </div>
-                     </div> */}
-               <div className="relative">
-                  {/* {item.afterIcon && (
+                     </div>
+                     <div className="relative">
+                        {item.afterIcon && (
                            <item.afterIcon
                               className=""
                               size={20}
                               fill="#E4E6EB"
                            />
-                        )} */}
-               </div>
-            </div>
-            {/* ); */}
-            {/* })} */}
+                        )}
+                     </div>
+                  </div>
+               );
+            })}
          </div>
       </div>
    );
