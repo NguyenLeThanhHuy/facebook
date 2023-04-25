@@ -26,7 +26,7 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
    return (
       <div className="bg-[#242526] px-2 py-4 top-0 rounded-b-xl">
          <div className="px-2">
-            {/* {history.length > 1 ? (
+            {history.length > 1 ? (
                <HeadTippy
                   icon={current.icon}
                   title={current.title}
@@ -34,9 +34,9 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
                      setHistory((prev) => prev.slice(0, prev.length - 1));
                   }}
                />
-            ) : ( */}
-            <AccountChange currentUser={currentUser} />
-            {/* )} */}
+            ) : (
+               <AccountChange currentUser={currentUser} />
+            )}
          </div>
 
          <div className="py-3 flex flex-col min-w-[330px] ">
@@ -54,11 +54,11 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
                         //    router.push(item.to);
                         // }
 
-                        if (isParent && item.children) {
-                           setHistory((prev) => [...prev, item.children]);
-                        } else {
-                           console.log('No children');
-                        }
+                        // if (isParent && item.children) {
+                        //    setHistory((prev) => [...prev, item.children]);
+                        // } else {
+                        //    console.log('No children');
+                        // }
                      }}
                      className="flex hover:bg-[#4c48489b] rounded-xl transition-all flex-row w-full justify-between items-center p-2"
                   >
