@@ -24,7 +24,7 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
    const router = useRouter();
 
    return (
-      <div className="bg-[#242526] px-2 py-4 top-0 rounded-b-xl">
+      <div className="bg-[#242526] transition-all px-2 py-4 top-0 rounded-b-xl">
          <div className="px-2">
             {history.length > 1 ? (
                <HeadTippy
@@ -39,24 +39,23 @@ const TippyShow: React.FC<TippyShowProps> = ({ currentUser, menuArr }) => {
             )}
          </div>
 
-         <div className="py-3 flex flex-col min-w-[330px] ">
+         <div className="py-3 flex flex-col min-w-[330px] transition-all ">
             {current.data.map((item, index) => {
                const isParent = !!item.children;
-               console.log(item);
                return (
                   <div
                      key={index}
                      onClick={() => {
-                        if (item.onSignOut) {
-                           item.onSignOut();
-                        }
-                        if (item.to) {
-                           router.push(item.to);
-                        }
                         if (isParent && item.children) {
                            setHistory((prev) => [...prev, item.children]);
                         } else {
-                           console.log('No children');
+                           if (item.onSignOut) {
+                              item.onSignOut();
+                           }
+
+                           if (item.to) {
+                              router.push(item.to);
+                           }
                         }
                      }}
                      className="flex hover:bg-[#4c48489b] rounded-xl transition-all flex-row w-full justify-between items-center p-2"

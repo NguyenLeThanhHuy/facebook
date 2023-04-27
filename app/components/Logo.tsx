@@ -6,7 +6,7 @@ const Logo = () => {
    const router = useRouter();
    return (
       <Image
-         className="rounded-full cursor-pointer transition-all"
+         className="rounded-full cursor-pointer transition-all bg-white"
          alt="Logo"
          onClick={() => router.push('/')}
          src={'/images/logo.png'}

@@ -170,17 +170,24 @@ const MenuChat: React.FC<MenuChatProps> = ({ currentUser }) => {
                content={
                   <TippyShow currentUser={currentUser} menuArr={listNavBox} />
                }
+               offset={[0, 5]}
                placement="bottom-end"
                arrow={false}
-               popperOptions={{
-                  modifiers: [
-                     {
-                        name: 'preventOverflow',
-                        options: { boundary: 'window' },
-                     },
-                  ],
+               delay={[100, 200]}
+               options={{
+                  popperOptions: {
+                     modifiers: [
+                        {
+                           name: 'preventOverflow',
+                           options: { boundary: 'window' },
+                        },
+                     ],
+                  },
+                  unmountOnExit: false,
                }}
                visible={showTippy}
+               interactive
+               onClickOutside={handleHide}
             >
                <Tippy
                   content={'Account'}
@@ -196,7 +203,7 @@ const MenuChat: React.FC<MenuChatProps> = ({ currentUser }) => {
                   }}
                >
                   <Image
-                     className="rounded-full bg-white"
+                     className="rounded-full"
                      width={40}
                      height={40}
                      src={'/images/noneuser.jpg'}
