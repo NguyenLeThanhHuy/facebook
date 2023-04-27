@@ -10,8 +10,8 @@ import {
 import { FaBell, FaMoon, FaUserLock } from 'react-icons/fa';
 import Image from 'next/image';
 import Tippy from '@tippyjs/react';
-import 'tippy.js/dist/tippy.css';
-import React, { useCallback, useRef, useState } from 'react';
+
+import React, { useCallback, useState } from 'react';
 import { User } from '@prisma/client';
 import TippyShow from '../TippyShow';
 import {
@@ -174,17 +174,15 @@ const MenuChat: React.FC<MenuChatProps> = ({ currentUser }) => {
                placement="bottom-end"
                arrow={false}
                delay={[100, 200]}
-               options={{
-                  popperOptions: {
-                     modifiers: [
-                        {
-                           name: 'preventOverflow',
-                           options: { boundary: 'window' },
-                        },
-                     ],
-                  },
-                  unmountOnExit: false,
+               popperOptions={{
+                  modifiers: [
+                     {
+                        name: 'preventOverflow',
+                        options: { boundary: 'window' },
+                     },
+                  ],
                }}
+               unmountOnExit={false}
                visible={showTippy}
                interactive
                onClickOutside={handleHide}

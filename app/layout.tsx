@@ -3,6 +3,7 @@ import Register from './components/models/Register';
 import './globals.css';
 import getCurrentUser from './actions/getCurrentUser';
 import Authentication from './auth/page';
+import 'tippy.js/dist/tippy.css';
 
 export const metadata = {
    title: 'Facebook App',
